@@ -12,6 +12,9 @@ article {
   width: 100%;
   height: 100%; }
 
+a {
+  text-decoration: none; }
+
 h1,
 p {
   color: #fff;
@@ -51,14 +54,31 @@ nav {
       width: 100%;
       height: 100%; }
 
+nav li:hover a[title]:after, nav li.active a[title]:after {
+  content: attr(title);
+  text-align: right;
+  text-transform: uppercase;
+  right: 55px;
+  top: 0;
+  font: 300 13px "museo sans", "Helvetica", "Arial", sans-serif;
+  position: relative;
+  text-decoration: none;
+  color: white; }
 nav li.intro {
   background: #252930; }
+  nav li.intro:hover a[title]:after, nav li.intro.active a[title]:after {
+    right: 51px; }
 nav li.about {
   background: #0093bf; }
 nav li.branding {
   background: #c93354; }
+  nav li.branding:hover a[title]:after, nav li.branding.active a[title]:after {
+    right: 79px; }
 nav li.case-study {
   background: #e8b03b; }
+  nav li.case-study:hover a[title]:after, nav li.case-study.active a[title]:after {
+    right: 91px;
+    white-space: nowrap; }
 
 article {
   position: relative; }

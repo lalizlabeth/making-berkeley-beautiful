@@ -19,6 +19,10 @@ article {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 p {
   color: #fff;
@@ -70,18 +74,53 @@ nav {
 }
 
 nav li {
+  &:hover,
+  &.active {
+    a[title]:after {
+      content: attr(title);
+      text-align: right;
+      text-transform: uppercase;
+      right: 55px;
+      top: 0;
+      font: 300 13px "museo sans", "Helvetica", "Arial", sans-serif;
+      position: relative;
+      text-decoration: none;
+      color: white;
+    }
+  }
   &.intro {
     background: $gray;
+    &:hover,
+    &.active {
+      a[title]:after {
+        right: 51px;
+      }
+    }
   }
   &.about {
     background: $blue;
   }
   &.branding {
     background: $red;
+    &:hover,
+    &.active {
+      a[title]:after {
+        right: 79px;
+      }
+    }
   }
   &.case-study {
     background: $gold;
+    &:hover,
+    &.active {
+      a[title]:after {
+        right: 91px;
+        white-space: nowrap;
+      }
+    }
+
   }
+
 }
 
 article {
