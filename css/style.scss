@@ -33,14 +33,15 @@ nav {
     border-radius: 20px;
     background: #f9f9f9;
     margin-bottom: 10px;
-    &.active {
-      width: 16px;
-      height: 16px;
-      border: #f9f9f9 solid 2px;
-    }
     &:hover {
       cursor: pointer;
       opacity: 0.8;
+    }
+    &.active,
+    &:hover {
+      width: 16px;
+      height: 16px;
+      border: #f9f9f9 solid 2px;
     }
     a {
       display: block;
@@ -128,4 +129,11 @@ nav li {
     cursor: pointer;
     opacity: 0.7;
   }
+}
+
+.next-slide-arrow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.5);
 }
