@@ -73,14 +73,15 @@ nav {
   }
 }
 
+// Specific styles for navigation elements
 nav li {
-  &:hover,
-  &.active {
+  &:hover {
     a[title]:after {
       content: attr(title);
       text-align: right;
       text-transform: uppercase;
-      right: 55px;
+      right: 62px;
+      letter-spacing: 0.15em;
       top: 0;
       font: 300 13px "museo sans", "Helvetica", "Arial", sans-serif;
       position: relative;
@@ -90,10 +91,9 @@ nav li {
   }
   &.intro {
     background: $gray;
-    &:hover,
-    &.active {
+    &:hover {
       a[title]:after {
-        right: 51px;
+        right: 58px;
       }
     }
   }
@@ -102,19 +102,17 @@ nav li {
   }
   &.branding {
     background: $red;
-    &:hover,
-    &.active {
+    &:hover {
       a[title]:after {
-        right: 79px;
+        right: 86px;
       }
     }
   }
   &.case-study {
     background: $gold;
-    &:hover,
-    &.active {
+    &:hover {
       a[title]:after {
-        right: 91px;
+        right: 98px;
         white-space: nowrap;
       }
     }
