@@ -44,7 +44,7 @@ nav {
     margin-bottom: 10px; }
     nav li:hover {
       cursor: pointer;
-      opacity: 0.8; }
+      opacity: 0.95; }
     nav li.active, nav li:hover {
       width: 16px;
       height: 16px;
