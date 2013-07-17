@@ -1,0 +1,96 @@
+/*
+/*
+  I N N O V A T I V E
+  D E S I G N -- 2013
+  -------------------
+  styles for "Making Berkeley Beautiful"
+*/
+/* Defines InnoD colors */
+html,
+body,
+article {
+  width: 100%;
+  height: 100%; }
+
+nav {
+  position: fixed;
+  top: 20px;
+  right: 20px; }
+  nav.hidden {
+    visibility: hidden; }
+  nav li {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #f9f9f9;
+    margin-bottom: 10px; }
+    nav li.active {
+      width: 16px;
+      height: 16px;
+      border: #f9f9f9 solid 2px; }
+    nav li:hover {
+      cursor: pointer;
+      opacity: 0.8; }
+    nav li a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+
+nav li.intro {
+  background: #252930; }
+nav li.about {
+  background: #0093bf; }
+nav li.branding {
+  background: #c93354; }
+nav li.case-study {
+  background: #e8b03b; }
+
+#intro {
+  background: #f4f4f4;
+  text-align: center; }
+  #intro .logo-blue {
+    width: 150px; }
+
+#about {
+  background: #0093bf; }
+
+#branding {
+  background: #c93354; }
+
+#case-study {
+  background: #e8b03b; }
+
+.logo-block {
+  margin: 0 auto;
+  padding-top: 300px;
+  width: 150px;
+  height: 242px; }
+
+.logo-type {
+  margin-top: 20px; }
+  .logo-type h3 {
+    color: #0093bf;
+    font: 18px "museo sans", "Helvetica", "Arial", sans-serif; }
+    .logo-type h3.innovative {
+      letter-spacing: 0.41em;
+      font-weight: 500; }
+    .logo-type h3.department {
+      letter-spacing: 0.355em;
+      font-weight: 300; }
+  .logo-type .crescent-blue img {
+    width: 13px;
+    margin-right: 0.38em; }
+
+.next-arrow-contain {
+  margin-top: 25px; }
+
+.next-arrow {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #0093bf;
+  margin: 0 auto; }
+  .next-arrow:hover {
+    cursor: pointer;
+    opacity: 0.7; }

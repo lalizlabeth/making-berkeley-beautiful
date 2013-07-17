@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+    <title>Making Berkeley Beautiful</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  </head>
+  <body>
+    <nav class="hidden">
+      <ul>
+        <li class="intro active">
+          <a href="#intro"></a>
+        </li>
+        <li class="about">
+          <a href="#about"></a>
+          </li>
+        <li class="branding">
+          <a href="#branding"></a>
+        </li>
+        <li class="case-study">
+          <a href="#case-study"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <article id="intro">
+      <div class="logo-block">
+        <img src="images/logo-blue.png" class="logo-blue"/>
+      </div>
+      <div class="logo-type">
+        <h3 class="innovative">INN<span class="crescent-blue"><img src="images/crescent-blue.png"/></span>VATIVE</h3>
+        <h3 class="department">DESIGN</h3>
+      </div>
+      <div class="next-arrow-contain">
+        <a href="#about" class="next-arrow"></a>
+      </div>
+    </article>
+
+    <article id="about"></article>
+    <article id="branding"></article>
+    <article id="case-study"></article>
+
+    <script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="scripts/jquery.easing.1.3.js"></script>
+    <script>
+    $(document).ready(function() {
+
+      var window_height = $("html").height();
+
+      // Removes previously 'active' section in navigation
+      // Updates new section to 'active'
+      function updateNav(section) {
+        console.log(section);
+        $("nav li.active").removeClass("active");
+        $("nav li." + section).addClass("active");
+      }
+
+      // Toggles visbility of navigation on scroll
+      $(window).scroll(function(evt) {
+        var top = $(this).scrollTop();
+        if (top >= window_height) { 
+          $("nav").removeClass("hidden");
+        } else {
+          $("nav").addClass("hidden");
+        }
+
+        // Updates navigation based upon page location
+        if (top >= (window_height * 3)) {
+          updateNav("case-study");
+        } else if (top >= (window_height * 2)) {
+          updateNav("branding");
+        } else if (top >= (window_height)) {
+          updateNav("about");
+        }
+      });
+
+      // Defines actions on anchor clicks
+      $("a").click(function(evt) {
+        var section = $(this).attr("href").substr(1),
+            sections = {"intro" : 0, "about" : 1, "branding" : 2, "case-study" : 3},
+            scrollLength = window_height * sections[section];
+
+        // Automates scroll on page
+        evt.preventDefault();
+        updateNav(section);
+        $("html, body").animate({ scrollTop: scrollLength }, { duration: 1000 }, { easing: "easeOutSine"});
+      });
+      
+    });
+    </script>
+  </body>
+
+  <footer>
+  </footer>
+</html>
