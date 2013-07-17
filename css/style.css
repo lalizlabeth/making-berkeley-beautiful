@@ -15,13 +15,16 @@ article {
 h1,
 p {
   color: #fff;
-  font-family: "museo sans", "Helvetica", "Arial", sans-serif; }
+  font-family: "museo sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300; }
 
 h1 {
-  font-size: 48px; }
+  font-size: 48px;
+  line-height: 58px; }
 
 p {
-  font-size: 15px; }
+  font-size: 18px;
+  line-height: 24px; }
 
 nav {
   position: fixed;
