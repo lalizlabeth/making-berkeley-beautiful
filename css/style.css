@@ -12,10 +12,21 @@ article {
   width: 100%;
   height: 100%; }
 
+h1,
+p {
+  color: #fff;
+  font-family: "museo sans", "Helvetica", "Arial", sans-serif; }
+
+h1 {
+  font-size: 48px; }
+
+p {
+  font-size: 15px; }
+
 nav {
   position: fixed;
-  top: 30px;
-  right: 30px;
+  top: 35px;
+  right: 35px;
   z-index: 100; }
   nav.hidden {
     visibility: hidden; }
@@ -46,6 +57,9 @@ nav li.branding {
 nav li.case-study {
   background: #e8b03b; }
 
+article {
+  position: relative; }
+
 #intro {
   background: #f4f4f4;
   text-align: center; }
@@ -53,7 +67,6 @@ nav li.case-study {
     width: 150px; }
 
 #about {
-  position: relative;
   background: #0093bf; }
 
 #branding {
@@ -108,3 +121,10 @@ nav li.case-study {
     display: block;
     width: 100%;
     height: 100%; }
+
+.text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  margin-right: 120px; }

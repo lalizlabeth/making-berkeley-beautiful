@@ -19,11 +19,26 @@ article {
   height: 100%;
 }
 
+h1,
+p {
+  color: #fff;
+  font-family: "museo sans", "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 15px;
+}
+
 // Styles for navigation
 nav {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 35px;
+  right: 35px;
+  z-index: 100;
   &.hidden {
     visibility: hidden;
   }
@@ -64,6 +79,10 @@ nav li {
   &.case-study {
     background: $gold;
   }
+}
+
+article {
+  position: relative;
 }
 
 #intro {
@@ -133,7 +152,22 @@ nav li {
 
 .next-slide-arrow {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.5);
+  width: 85px;
+  height: 80px;
+  bottom: 0;
+  right: 35px;
+  background: rgba(255, 255, 255, 0.3);
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  margin-right: 120px;
 }
