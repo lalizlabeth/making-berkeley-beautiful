@@ -1,4 +1,4 @@
-making-berkeley-beautiful
+Making Berkeley Beautiful
 =========================
 
-Making Berkeley Beauitful
+Innovative Design's rebranding.
