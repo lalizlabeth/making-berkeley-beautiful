@@ -14,8 +14,9 @@ article {
 
 nav {
   position: fixed;
-  top: 20px;
-  right: 20px; }
+  top: 30px;
+  right: 30px;
+  z-index: 100; }
   nav.hidden {
     visibility: hidden; }
   nav li {
@@ -52,6 +53,7 @@ nav li.case-study {
     width: 150px; }
 
 #about {
+  position: relative;
   background: #0093bf; }
 
 #branding {
@@ -97,6 +99,12 @@ nav li.case-study {
 
 .next-slide-arrow {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background: rgba(255, 255, 255, 0.5); }
+  width: 85px;
+  height: 80px;
+  bottom: 0;
+  right: 35px;
+  background: rgba(255, 255, 255, 0.3); }
+  .next-slide-arrow a {
+    display: block;
+    width: 100%;
+    height: 100%; }
