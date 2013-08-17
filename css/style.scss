@@ -25,19 +25,26 @@ a {
 
 h1,
 p {
+  position: relative;
   color: #fff;
   font-family: "museo sans", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
+  z-index: 4;
 }
 
 h1 {
   font-size: 48px;
   line-height: 58px;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 28px;
+  span.innod {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
 }
 
 // Styles for navigation
@@ -131,6 +138,11 @@ article {
   .logo-blue {
     width: 150px;
   }
+  .logo-block {
+    margin: 0 auto;
+    height: 242px;
+    padding-top: 300px;
+  }
 }
 
 #about {
@@ -138,18 +150,22 @@ article {
 }
 
 #branding {
-  background: $red;
+  background: #f9f9f9;
+  .text-float-left {
+    background: $red;
+  }
 }
 
 #case-study {
   background: $gold;
 }
 
+#education {
+  background: #fff;
+}
+
 .logo-block {
-  margin: 0 auto;
-  padding-top: 300px;
   width: 150px;
-  height: 242px;
 }
 
 .logo-type {
@@ -220,10 +236,65 @@ article {
   }
 }
 
-.text {
+.text-float-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 50px;
   margin-right: 120px;
+}
+
+.text-float-left,
+.content-float-right{
+  float: left;
+  height: 100%;
+  padding: 5%;
+}
+
+.text-float-left {
+  width: 22%;
+  min-width: 223px;
+  max-width: 297px;
+}
+
+.content-float-right {
+  position: relative;
+  overflow: hidden;         // Clearfix
+  width: 58%;
+  background: #f9f9f9;
+  .logo-group {
+    margin: 0 auto;
+    overflow: hidden;       // Clearfix
+    width: 600px;
+  }
+  .logo-block {
+    float: left;
+    margin-right: 50px;
+    width: 100px;
+    img {
+      width: 100px;
+    }
+  }
+}
+
+#blue-bear {
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+}
+
+.next-btn {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  color: #fff;
+  font: 300 14px "museo sans", "Helvetica", "Arial", sans-serif;
+  .caret {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
 }

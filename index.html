@@ -28,6 +28,9 @@
         <li class="case-study">
           <a href="#case-study" title="Case Study"></a>
         </li>
+        <li lcass="education">
+          <a href="#education" title="Education"></a>
+        </li>
       </ul>
     </nav>
 
@@ -45,18 +48,45 @@
     </article>
 
     <article id="about">
-      <div class="text">
+      <div class="text-float-bottom">
+        <img src="images/bear.png" id="blue-bear"></img>
         <h1>Making Berkeley Beautiful</h1>
-        <p>Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>We're <span class="innod">Innovative Design</span>, a student-led creative agency providing graphic design, photography, education, and marketing services. Great design is rooted in a passion for change, for knowledge, and for inspiration. We are too. Together, we're making Berkeley a more beautiful place.</p>
       </div>
       <div class="next-slide-arrow"><a href="#branding"></a></div>
     </article>
 
     <article id="branding">
+      <div class="text-float-left">
+        <h1>The New Face of Innovative Design</h1>
+        <p>Since 2008, <span class="innod">Innovative Design</span> has worked with local businesses and campus groups to help them raise awareness and realize their goals. As we continue to expand our offerings and grow Berkeley's creative community, we've updated our visual identity to reflect our relentless commitment to innovation.</p>
+        <a class="next-btn" href="#">Take a peek at our rebranding process <span class="caret">&#9654;</span></a>
+      </div>
+      <div class="content-float-right" id="group-1">
+        <div class="logo-group">
+          <div class="logo-block">
+            <img src="images/logo-blue.png" class="logo-blue"/>
+          </div>
+          <div class="logo-block">
+            <img src="images/logo-red.png" class="logo-red"/>
+          </div>
+          <div class="logo-block">
+            <img src="images/logo-yellow.png" class="logo-yellow"/>
+          </div>
+          <div class="logo-block">
+            <img src="images/logo-black.png" class="logo-black"/>
+          </div>
+        </div>
+      </div>
+
       <div class="next-slide-arrow"><a href="#case-study"></a></div>
     </article>
 
     <article id="case-study">
+      <div class="next-slide-arrow"><a href="#education"></a></div>
+    </article>
+
+    <article id="education">
       <div class="next-slide-arrow"><a href="javascript:void(0)"></a></div>
     </article>
 
@@ -70,7 +100,6 @@
       // Removes previously 'active' section in navigation
       // Updates new section to 'active'
       function updateNav(section) {
-        console.log(section);
         $("nav li.active").removeClass("active");
         $("nav li." + section).addClass("active");
       }
@@ -104,6 +133,15 @@
         evt.preventDefault();
         updateNav(section);
         $("html, body").animate({ scrollTop: scrollLength }, { duration: 1000 }, { easing: "easeOutSine"});
+      });
+
+      // Changes bear height
+      var bear_height = window_height * 0.8;
+      $('#blue-bear').css("height", bear_height);
+
+      $(window).resize(function() {
+        bear_height = window_height * 0.8;
+        $('#blue-bear').css("height", bear_height);
       });
       
     });
